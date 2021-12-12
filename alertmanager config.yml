@@ -1,0 +1,17 @@
+global:
+  resolve_timeout: 2m
+
+route:
+  group_by: ['alertname']
+  receiver: 'email-me'
+
+receivers:
+- name: email-me
+  email_configs:
+  - to: aditiarezanugraha@gmail.com
+    from: aditiarezanugraha@gmail.com
+    smarthost: smtp.gmail.com:587
+    auth_username: aditiarezanugraha@gmail.com
+    auth_identity: aditiarezanugraha@gmail.com
+    auth_password: abcd
+    send_resolved: True

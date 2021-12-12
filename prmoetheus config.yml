@@ -1,0 +1,11 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus-nodeflux'
+    static_configs:
+    - targets: ['10.95.95.10:9090']
+  - job_name: 'node-aditia'
+    static_configs:
+    - targets: ['10.95.95.10:9100','10.95.95.20:9100']
